@@ -782,7 +782,10 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="nav-logo">🐛 Bug<span>Snap</span></a>
-      <a href="#" class="nav-cta">Add to Chrome — Free</a>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <a href="getting-started.html" target="_blank" style="font-size:13px;font-weight:600;color:#64748b;text-decoration:none;padding:8px 14px;border:1.5px solid #e2e8f0;border-radius:7px;transition:all 0.15s;" onmouseover="this.style.borderColor='#10b981';this.style.color='#10b981'" onmouseout="this.style.borderColor='#e2e8f0';this.style.color='#64748b'">📖 Get Started</a>
+        <a href="./bugsnap-extension-demo.zip" download class="nav-cta">Add to Chrome — Free</a>
+      </div>
     </div>
   </nav>
 
@@ -790,9 +793,9 @@
   <section class="hero">
     <div class="hero-badge">✨ Powered by Claude AI</div>
     <h1>One click.<br><span class="highlight">Full bug report.</span><br>Zero typing.</h1>
-    <p>BugSnap captures screenshots, console logs, and network errors automatically — then uses AI to write the complete bug report and file it in Azure DevOps.</p>
+    <p>BugSnap captures screenshots, console logs, and network errors automatically — then lets you send bug reports directly to Azure DevOps, Jira, or GitHub. No AI required.</p>
     <div class="hero-actions">
-      <a href="#" class="btn-primary">🐛 Add to Chrome — Free</a>
+      <a href="./bugsnap-extension-demo.zip" download class="btn-primary">🐛 Add to Chrome — Free</a>
       <a href="#demo" class="btn-secondary">▶ Watch Demo</a>
     </div>
 
@@ -805,9 +808,10 @@
   <div class="powered-by">
     <p>Integrates with</p>
     <div class="logo-strip">
-      <div class="logo-pill"><div class="dot"></div> Claude AI (Anthropic)</div>
       <div class="logo-pill"><div class="dot"></div> Azure DevOps</div>
-      <div class="logo-pill"><div class="dot"></div> Chrome Extension</div>
+      <div class="logo-pill"><div class="dot"></div> Jira</div>
+      <div class="logo-pill"><div class="dot"></div> GitHub</div>
+      <div class="logo-pill"><div class="dot"></div> Claude AI (Anthropic)</div>
     </div>
   </div>
 
@@ -848,8 +852,8 @@
           </div>
           <div class="step-body">
             <div class="step-number">3</div>
-            <div class="step-title">Filed in Azure DevOps</div>
-            <p class="step-desc">One click sends everything to Azure DevOps — Work Item created with the full report, screenshot attached, and console log file included.</p>
+            <div class="step-title">Send to your bug tracker</div>
+            <p class="step-desc">One click sends everything to Azure DevOps, Jira, or GitHub — issue created with the full report, screenshot attached, and console log included.</p>
           </div>
         </div>
 
@@ -886,9 +890,9 @@
           <p class="feature-desc">Claude analyzes screenshot + technical data to write a structured bug report. Consistent format, every time.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📋</div>
-          <div class="feature-title">Azure DevOps Integration</div>
-          <p class="feature-desc">Creates Work Items directly in your project. Assigns, labels, and attaches logs automatically.</p>
+          <div class="feature-icon">🔗</div>
+          <div class="feature-title">3 Platform Integrations</div>
+          <p class="feature-desc">Send to Azure DevOps, Jira, or GitHub with one click. Issues created with full report, screenshot, and logs attached.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
@@ -1047,10 +1051,10 @@
           <div class="price-amount">$0</div>
           <div class="price-desc">For individual testers</div>
           <ul class="price-features">
-            <li>3 AI reports / month</li>
-            <li>Screenshot capture</li>
+            <li>Screenshot capture + annotation</li>
             <li>Console &amp; network logs</li>
-            <li>Browser / OS detection</li>
+            <li>Azure DevOps, Jira &amp; GitHub</li>
+            <li>3 AI auto-fill reports / month</li>
           </ul>
         </div>
         <div class="price-card featured">
@@ -1059,8 +1063,8 @@
           <div class="price-amount">$19 <span>/user/mo</span></div>
           <div class="price-desc">For QA teams &amp; agencies</div>
           <ul class="price-features">
-            <li>Unlimited AI reports*</li>
-            <li>Azure DevOps integration</li>
+            <li>Unlimited AI auto-fill reports*</li>
+            <li>Everything in Free</li>
             <li>Report history &amp; analytics</li>
             <li>Priority support</li>
           </ul>
@@ -1203,25 +1207,26 @@
 
       <div class="roadmap-grid">
         <div class="roadmap-card done">
-          <div class="roadmap-phase">Day 1 ✓</div>
+          <div class="roadmap-phase">Now ✓</div>
           <div class="roadmap-time">Done</div>
-          <div class="roadmap-title">MVP</div>
+          <div class="roadmap-title">v1.0 — Live</div>
           <ul class="roadmap-items">
             <li>Chrome extension</li>
+            <li>Screenshot + annotation</li>
             <li>AI bug reports (Claude)</li>
-            <li>Azure DevOps integration</li>
+            <li>Azure DevOps, Jira &amp; GitHub</li>
             <li>Free + Pro tiers</li>
           </ul>
         </div>
         <div class="roadmap-card">
           <div class="roadmap-phase">By week 2</div>
-          <div class="roadmap-time">MVP + Enhanced Capture</div>
-          <div class="roadmap-title">+ Annotations &amp; Recording</div>
+          <div class="roadmap-time">Enhanced Capture</div>
+          <div class="roadmap-title">+ Recording &amp; History</div>
           <ul class="roadmap-items">
-            <li>Annotation tools (~1 day)</li>
             <li>Screen recording (~2 days)</li>
-            <li>Network logging (~1 day)</li>
             <li>Report history (~2 days)</li>
+            <li>Linear integration (~1 day)</li>
+            <li>Stripe payments (~2 days)</li>
           </ul>
         </div>
         <div class="roadmap-card">
@@ -1259,7 +1264,7 @@
         </div>
       </div>
 
-      <p class="roadmap-note">Day 1: Chrome only → <strong>Week 4: 4 browsers</strong> → <strong>Month 3: Desktop + Mobile</strong> → <strong>Month 4: Full AI platform</strong></p>
+      <p class="roadmap-note">v1.0 live: Chrome + Azure / Jira / GitHub → <strong>Week 2: Recording + Payments</strong> → <strong>Month 3: Desktop + Mobile</strong> → <strong>Month 4: Full AI platform</strong></p>
     </div>
   </section>
 

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — BugSnap</title>
+  <style>
+    :root {
+      --green: #10b981;
+      --green-dark: #059669;
+      --green-light: #d1fae5;
+      --dark: #0f172a;
+      --gray: #64748b;
+      --gray-light: #f1f5f9;
+      --border: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--green); }
+    .nav-back {
+      font-size: 13px;
+      color: var(--gray);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--green); }
+
+    /* ── HERO ── */
+    .page-hero {
+      background: linear-gradient(160deg, #f0fdf4 0%, #ffffff 60%);
+      padding: 60px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border: 1px solid #a7f3d0;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .page-hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* ── PHASE HEADER ── */
+    .phase {
+      margin-bottom: 56px;
+    }
+    .phase-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .phase-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .phase-subtitle {
+      font-size: 15px;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    /* ── STEPS ── */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .step-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: var(--gray-light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      transition: box-shadow 0.15s;
+    }
+    .step-item:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--green);
+      color: white;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-content {}
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .step-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .step-desc code {
+      background: #e2e8f0;
+      color: var(--dark);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+    .step-desc a {
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .step-desc a:hover { text-decoration: underline; }
+
+    /* ── TIP BOX ── */
+    .tip-box {
+      background: #f0fdf4;
+      border: 1px solid #a7f3d0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #065f46;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .tip-icon { font-size: 16px; flex-shrink: 0; }
+
+    /* ── WARNING BOX ── */
+    .warning-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #92400e;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    /* ── DIVIDER ── */
+    .phase-divider {
+      border: none;
+      border-top: 2px dashed var(--border);
+      margin: 0 0 56px;
+    }
+
+    /* ── INTEGRATION CARDS ── */
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .integration-card {
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      cursor: default;
+    }
+    .integration-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 4px 16px rgba(16,185,129,0.1);
+    }
+    .integration-icon { font-size: 28px; margin-bottom: 8px; }
+    .integration-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .integration-desc {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+      border: 1px solid #a7f3d0;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .final-cta h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .final-cta p {
+      font-size: 15px;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    footer p { font-size: 13px; color: var(--gray); }
+    footer a { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">🐛 Bug<span>Snap</span></a>
+      <a href="index.html" class="nav-back">← Back to home</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-badge">Beta · Developer Mode</div>
+    <h1>Get started in 5 minutes</h1>
+    <p>Install BugSnap, connect your bug tracker, and send your first report — step by step.</p>
+  </div>
+
+  <div class="content">
+
+    <!-- PHASE 1: INSTALL -->
+    <div class="phase">
+      <div class="phase-label">Phase 1 of 3</div>
+      <div class="phase-title">Install the extension</div>
+      <div class="phase-subtitle">BugSnap is in beta — installation is manual via Chrome Developer Mode.</div>
+
+      <div class="steps-list">
+
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Download the extension</div>
+            <div class="step-desc">
+              Download <a href="./bugsnap-extension-demo.zip" download><strong>bugsnap-extension-demo.zip</strong></a> from this page.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Unzip the file</div>
+            <div class="step-desc">
+              Double-click the zip to extract it. You'll get a folder called <code>bugsnap-extension</code> — keep it somewhere permanent (don't delete it).
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Open Chrome extensions</div>
+            <div class="step-desc">
+              In Chrome, go to <code>chrome://extensions</code> in the address bar.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Enable Developer Mode</div>
+            <div class="step-desc">
+              Toggle <strong>Developer mode</strong> on — it's in the top-right corner of the extensions page.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Load the extension</div>
+            <div class="step-desc">
+              Click <strong>"Load unpacked"</strong> → select the <code>bugsnap-extension</code> folder you unzipped. The 🐛 icon will appear in your Chrome toolbar.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <span>If you don't see the icon, click the puzzle piece (🧩) in Chrome's toolbar and pin BugSnap to keep it visible.</span>
+      </div>
+    </div>
+
+    <hr class="phase-divider">
+
+    <!-- PHASE 2: CONNECT -->
+    <div class="phase">
+      <div class="phase-label">Phase 2 of 3</div>
+      <div class="phase-title">Connect your bug tracker</div>
+      <div class="phase-subtitle">Choose where your bug reports will be sent — Azure DevOps, Jira, or GitHub.</div>
+
+      <div class="steps-list">
+
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Open BugSnap and sign in</div>
+            <div class="step-desc">
+              Click the 🐛 icon in your toolbar. Sign in with your <strong>Google account</strong> when prompted.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open Settings</div>
+            <div class="step-desc">
+              Click the <strong>⚙️ gear icon</strong> in the top-right of the popup to open the Settings page.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Connect your platform</div>
+            <div class="step-desc">
+              Choose one of the three integrations and follow the OAuth flow:
+            </div>
+            <div class="integration-grid">
+              <div class="integration-card">
+                <div class="integration-icon">☁️</div>
+                <div class="integration-name">Azure DevOps</div>
+                <div class="integration-desc">Enter your organization name and select a project</div>
+              </div>
+              <div class="integration-card">
+                <div class="integration-icon">🔷</div>
+                <div class="integration-name">Jira</div>
+                <div class="integration-desc">Sign in to Atlassian and select your site and project</div>
+              </div>
+              <div class="integration-card">
+                <div class="integration-icon">🐙</div>
+                <div class="integration-name">GitHub</div>
+                <div class="integration-desc">Authorize BugSnap and select a repository</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="warning-box">
+        <span class="tip-icon">⚠️</span>
+        <span>Beta note: OAuth popups may ask you to authorize a few permissions. This is normal — BugSnap only requests access to create issues.</span>
+      </div>
+    </div>
+
+    <hr class="phase-divider">
+
+    <!-- PHASE 3: FIRST REPORT -->
+    <div class="phase">
+      <div class="phase-label">Phase 3 of 3</div>
+      <div class="phase-title">Send your first bug report</div>
+      <div class="phase-subtitle">Navigate to any web app and report a bug in under 60 seconds.</div>
+
+      <div class="steps-list">
+
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Navigate to the bug</div>
+            <div class="step-desc">
+              Go to the page where the bug happens. The extension captures the current state automatically when you open it.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Click the BugSnap icon</div>
+            <div class="step-desc">
+              The popup opens and instantly captures a <strong>screenshot</strong>, the URL, browser info, OS, screen resolution, and any console errors.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Annotate (optional)</div>
+            <div class="step-desc">
+              Click <strong>"✏️ Mark area on screenshot"</strong> to highlight the bug with a rectangle, arrow, or freehand drawing.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Fill in the title</div>
+            <div class="step-desc">
+              Type a short bug title and select severity. Optionally add a description.<br><br>
+              Or click <strong>"✨ Auto-fill with AI"</strong> to let Claude analyze the screenshot and fill everything automatically (3 free uses/month).
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Send the report</div>
+            <div class="step-desc">
+              Click your connected platform button — <strong>Azure DevOps</strong>, <strong>Jira</strong>, or <strong>GitHub</strong>. The issue is created with the full report, screenshot, and console logs attached.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">✅</span>
+        <span>Done! You'll see a green success message with a link to the created issue. Click it to verify everything arrived correctly.</span>
+      </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="final-cta">
+      <h2>Ready to report your first bug?</h2>
+      <p>Download BugSnap and start capturing bugs in minutes.</p>
+      <a href="./bugsnap-extension-demo.zip" download class="btn-primary">
+        🐛 Download BugSnap — Free
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>BugSnap Beta · Built by <a href="index.html">Nexion</a> · Questions? Contact us at <a href="mailto:lscj2022@gmail.com">lscj2022@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
