@@ -791,13 +791,14 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">✨ Powered by Claude AI</div>
+    <div class="hero-badge">🐛 Beta · Free to install</div>
     <h1>One click.<br><span class="highlight">Full bug report.</span><br>Zero typing.</h1>
-    <p>BugSnap captures screenshots, console logs, and network errors automatically — then lets you send bug reports directly to Azure DevOps, Jira, or GitHub. No AI required.</p>
+    <p>Stop spending 15 minutes writing bug reports. Capture screenshot, console logs and browser info in one click — and send it directly to Jira, Azure DevOps or GitHub. No typing required.</p>
     <div class="hero-actions">
       <a href="./bugsnap-extension-demo.zip" download class="btn-primary">🐛 Add to Chrome — Free</a>
       <a href="#demo" class="btn-secondary">▶ Watch Demo</a>
     </div>
+    <p style="font-size:13px;color:#94a3b8;margin-top:-44px;margin-bottom:20px;">No credit card required · Uninstall anytime in one click</p>
 
     <div class="hero-screenshot">
       <img src="images/hero.png" alt="BugSnap capturing a 404 bug in action">
@@ -842,7 +843,7 @@
           <div class="step-body">
             <div class="step-number">2</div>
             <div class="step-title">AI writes the report</div>
-            <p class="step-desc">Claude analyzes the screenshot and technical data to generate a complete bug report — title, steps to reproduce, severity, and environment.</p>
+            <p class="step-desc">Claude analyzes the screenshot and technical data to generate a complete bug report — title, steps to reproduce, severity, and environment. <em>(3 AI reports free/month, unlimited with Pro)</em></p>
           </div>
         </div>
 
@@ -872,32 +873,32 @@
         <div class="feature-card">
           <div class="feature-icon">📸</div>
           <div class="feature-title">Auto Screenshot</div>
-          <p class="feature-desc">Captures the exact state of the page when the bug occurred. No more "can you reproduce it?" back-and-forth.</p>
+          <p class="feature-desc">The exact bug, captured — devs have everything they need.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌐</div>
           <div class="feature-title">Network Error Capture</div>
-          <p class="feature-desc">Intercepts all fetch() and XHR requests. Failed API calls (4xx/5xx) are automatically included with timing data.</p>
+          <p class="feature-desc">Failed API calls in the report — automatically.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">💻</div>
           <div class="feature-title">Console Log Capture</div>
-          <p class="feature-desc">Every console.error, console.warn, and unhandled promise rejection — timestamped and ready for the report.</p>
+          <p class="feature-desc">Every error included — no DevTools needed.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🧠</div>
           <div class="feature-title">AI-Powered Reports</div>
-          <p class="feature-desc">Claude analyzes screenshot + technical data to write a structured bug report. Consistent format, every time.</p>
+          <p class="feature-desc">Title, severity, steps to reproduce — written in seconds.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔗</div>
           <div class="feature-title">3 Platform Integrations</div>
-          <p class="feature-desc">Send to Azure DevOps, Jira, or GitHub with one click. Issues created with full report, screenshot, and logs attached.</p>
+          <p class="feature-desc">One click to Jira, Azure DevOps or GitHub.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
           <div class="feature-title">Works on Any Web App</div>
-          <p class="feature-desc">Injects into any page at load time. No SDK required in your app. Zero friction for QA teams.</p>
+          <p class="feature-desc">Any http/https page — no setup in your codebase.</p>
         </div>
       </div>
     </div>
@@ -1030,8 +1031,8 @@
         <div class="step">
           <div class="step-body">
             <div class="step-number" style="background:var(--green);">3</div>
-            <div class="step-title">Support Teams</div>
-            <p class="step-desc"><strong>Who:</strong> Customer support in SaaS companies (50-500 employees)<br><strong>Pain:</strong> Users describe bugs vaguely, escalation to dev takes days<br><strong>Buyer:</strong> Head of Support or Customer Success Manager</p>
+            <div class="step-title">Freelance Developers</div>
+            <p class="step-desc"><strong>Who:</strong> Freelance web developers reporting bugs to clients<br><strong>Pain:</strong> Clients describe bugs poorly, hard to reproduce without context<br><strong>Buyer:</strong> The freelancer decides directly</p>
           </div>
         </div>
       </div>
@@ -1045,11 +1046,11 @@
       <h2 class="section-title">Same price. More value.</h2>
       <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Competitors charge the same — but without AI. Start free, upgrade when your team is ready.</p>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid" style="max-width:1000px;">
         <div class="price-card">
           <div class="price-tier">Free</div>
           <div class="price-amount">$0</div>
-          <div class="price-desc">For individual testers</div>
+          <div class="price-desc">For solo testers tired of writing reports manually</div>
           <ul class="price-features">
             <li>Screenshot capture + annotation</li>
             <li>Console &amp; network logs</li>
@@ -1061,7 +1062,7 @@
           <div class="price-badge">Most Popular</div>
           <div class="price-tier">Pro</div>
           <div class="price-amount">$19 <span>/user/mo</span></div>
-          <div class="price-desc">For QA teams &amp; agencies</div>
+          <div class="price-desc">For QA teams that report bugs daily</div>
           <ul class="price-features">
             <li>Unlimited AI auto-fill reports*</li>
             <li>Everything in Free</li>
@@ -1069,132 +1070,20 @@
             <li>Priority support</li>
           </ul>
         </div>
+        <div class="price-card" style="opacity:0.75;">
+          <div class="price-badge" style="background:#94a3b8;">Coming Soon</div>
+          <div class="price-tier">Team</div>
+          <div class="price-amount">$59 <span>/mo</span></div>
+          <div class="price-desc">For teams that need consistent bug reporting</div>
+          <ul class="price-features">
+            <li>Up to 5 users</li>
+            <li>Everything in Pro</li>
+            <li>Team dashboard</li>
+            <li>Usage analytics</li>
+          </ul>
+        </div>
       </div>
       <p style="margin-top:24px;font-size:13px;color:#94a3b8;">*Up to 500 AI reports per user/month. Average usage is ~40 reports/month.</p>
-    </div>
-  </section>
-
-  <!-- REVENUE PROJECTION -->
-  <section class="section">
-    <div class="section-inner" style="text-align:center;">
-      <div class="section-label">Revenue Projection</div>
-      <h2 class="section-title">Year 1 — Growth Roadmap</h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Conservative estimate with 3-5% free-to-paid conversion rate.</p>
-
-      <div class="projection-grid">
-        <div class="proj-card">
-          <div class="proj-quarter">Quarter 1</div>
-          <div class="proj-mrr">$285<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
-          <div class="proj-detail">500 free users<br>15 paid users<br><strong>= $855/quarter</strong></div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-quarter">Quarter 2</div>
-          <div class="proj-mrr">$1,140<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
-          <div class="proj-detail">2,000 free users<br>60 paid users<br><strong>= $3,420/quarter</strong></div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-quarter">Quarter 3</div>
-          <div class="proj-mrr">$3,800<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
-          <div class="proj-detail">5,000 free users<br>200 paid users<br><strong>= $11,400/quarter</strong></div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-quarter">Quarter 4</div>
-          <div class="proj-mrr">$9,500<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
-          <div class="proj-detail">10,000 free users<br>500 paid users<br><strong>= $28,500/quarter</strong></div>
-        </div>
-      </div>
-
-      <div class="proj-summary">
-        <div class="proj-stat">
-          <div class="proj-stat-value">~$44K</div>
-          <div class="proj-stat-label">Year 1 ARR</div>
-        </div>
-        <div class="proj-stat">
-          <div class="proj-stat-value">10K</div>
-          <div class="proj-stat-label">Target Installs</div>
-        </div>
-        <div class="proj-stat">
-          <div class="proj-stat-value">3-5%</div>
-          <div class="proj-stat-label">Conversion Rate</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COSTS & MARGINS -->
-  <section class="section features-bg">
-    <div class="section-inner" style="text-align:center;">
-      <div class="section-label">Unit Economics</div>
-      <h2 class="section-title">Low costs. High margins.</h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">AI-powered SaaS with near-zero infrastructure costs.</p>
-
-      <div class="costs-grid">
-        <div class="cost-card">
-          <div class="cost-icon">🤖</div>
-          <div class="cost-name">Claude API</div>
-          <div class="cost-amount">~$0.02</div>
-          <div class="cost-note">per report (vision + text)</div>
-        </div>
-        <div class="cost-card">
-          <div class="cost-icon">🏪</div>
-          <div class="cost-name">Chrome Web Store</div>
-          <div class="cost-amount">$5</div>
-          <div class="cost-note">one-time registration</div>
-        </div>
-        <div class="cost-card">
-          <div class="cost-icon">🌐</div>
-          <div class="cost-name">Hosting</div>
-          <div class="cost-amount">$0</div>
-          <div class="cost-note">GitHub Pages (landing)</div>
-        </div>
-        <div class="cost-card">
-          <div class="cost-icon">📡</div>
-          <div class="cost-name">Domain</div>
-          <div class="cost-amount">$12</div>
-          <div class="cost-note">per year (future)</div>
-        </div>
-        <div class="cost-card">
-          <div class="cost-icon">📣</div>
-          <div class="cost-name">Marketing</div>
-          <div class="cost-amount">$500</div>
-          <div class="cost-note">per month (LinkedIn + Google Ads)</div>
-        </div>
-      </div>
-
-      <p style="margin-top:24px;font-size:13px;color:#94a3b8;max-width:600px;margin-left:auto;margin-right:auto;">LinkedIn Ads: target QA Leads and Engineering Managers by exact job title and company size. Google Ads: capture active search intent for "bug reporting tool" and "Marker.io alternative".</p>
-
-      <div class="margin-box">
-        <h3>Estimated Net Margin at Q4 (500 paid users)</h3>
-        <div class="margin-value">~89%</div>
-        <div class="margin-detail">Revenue: $9,500/mo — AI costs: -$400 — Infrastructure: -$100 — Marketing: -$500 = <strong>$8,500 net profit/month</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUE PROPOSITION (ROI) -->
-  <section class="section">
-    <div class="section-inner" style="text-align:center;">
-      <div class="section-label">Why this price?</div>
-      <h2 class="section-title">BugSnap pays for itself in 7 reports.</h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Manual bug reporting is expensive. BugSnap saves 15 minutes per report.</p>
-
-      <div class="roi-grid">
-        <div class="roi-card negative">
-          <div class="roi-label">Without BugSnap</div>
-          <div class="roi-amount">$1,190/mo</div>
-          <div class="roi-desc">3 QA engineers x 40 reports/mo<br>17 min each at $35/hr<br><strong>= 34 hours/month wasted</strong></div>
-        </div>
-        <div class="roi-card positive">
-          <div class="roi-label">With BugSnap</div>
-          <div class="roi-amount">$140/mo</div>
-          <div class="roi-desc">3 QA engineers x 40 reports/mo<br>2 min each at $35/hr<br><strong>= 4 hours/month total</strong></div>
-        </div>
-      </div>
-
-      <div class="roi-result">
-        <div class="roi-result-value">18x Return on Investment</div>
-        <div class="roi-result-label">For every <strong>$1 spent</strong> on BugSnap, teams save <strong>$18 in QA time</strong> — that's <strong>$993/month</strong> net savings and <strong>30 hours back</strong></div>
-      </div>
     </div>
   </section>
 
@@ -1268,11 +1157,179 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-inner" style="max-width:720px;">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common questions</h2>
+
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:40px;">
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Is it really free?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">Yes. Unlimited screenshot captures, console logs and bug reports to Jira, Azure DevOps or GitHub — forever free. No credit card required. You get 3 AI auto-fill reports per month on the free plan.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Is setup complicated?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">No. Install the extension, connect your Jira, Azure DevOps or GitHub account in settings, and you're ready. Takes under 2 minutes.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">What happens when I run out of AI reports?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">You can still capture screenshots, console logs and send reports manually — the AI auto-fill is what gets paused. Upgrade to Pro for unlimited AI reports.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Are my screenshots and logs stored anywhere?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">No. Screenshots and logs are sent directly to your bug tracker. We don't store them on our servers.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Which sites does it work on?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">BugSnap works on any regular web app with an http/https URL. It does not work on Chrome's internal pages (new tab, settings, extensions) or local files.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-section">
     <h2>Stop writing bug reports.<br>Start fixing bugs.</h2>
     <p>Free plan available. AI-powered reports included. No credit card required.</p>
     <a href="#" class="btn-primary" style="font-size:18px;padding:16px 36px;">🐛 Add to Chrome — Free</a>
+  </section>
+
+  <!-- INVESTOR INFO (collapsible) -->
+  <section class="section" style="background:var(--gray-light);">
+    <div class="section-inner">
+      <details>
+        <summary style="cursor:pointer;font-size:15px;font-weight:700;color:var(--gray);list-style:none;display:flex;align-items:center;gap:8px;user-select:none;">
+          <span style="font-size:18px;">+</span> Investor Information — Revenue Projections, Unit Economics &amp; ROI
+        </summary>
+
+        <div style="margin-top:48px;">
+
+          <!-- REVENUE PROJECTION -->
+          <div style="text-align:center;margin-bottom:72px;">
+            <div class="section-label">Revenue Projection</div>
+            <h2 class="section-title">Year 1 — Growth Roadmap</h2>
+            <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Conservative estimate with 3-5% free-to-paid conversion rate. Mix of Pro ($19/user/mo) and Team ($59/mo) plans.</p>
+
+            <div class="projection-grid">
+              <div class="proj-card">
+                <div class="proj-quarter">Quarter 1</div>
+                <div class="proj-mrr">$249<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
+                <div class="proj-detail">500 free users<br>10 Pro · 1 Team<br><strong>= $747/quarter</strong></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-quarter">Quarter 2</div>
+                <div class="proj-mrr">$1,150<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
+                <div class="proj-detail">2,000 free users<br>45 Pro · 5 Team<br><strong>= $3,450/quarter</strong></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-quarter">Quarter 3</div>
+                <div class="proj-mrr">$3,925<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
+                <div class="proj-detail">5,000 free users<br>160 Pro · 15 Team<br><strong>= $11,775/quarter</strong></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-quarter">Quarter 4</div>
+                <div class="proj-mrr">$9,370<span style="font-size:14px;color:#64748b;font-weight:400;">/mo</span></div>
+                <div class="proj-detail">10,000 free users<br>400 Pro · 30 Team<br><strong>= $28,110/quarter</strong></div>
+              </div>
+            </div>
+
+            <div class="proj-summary">
+              <div class="proj-stat">
+                <div class="proj-stat-value">~$44K</div>
+                <div class="proj-stat-label">Year 1 Revenue</div>
+              </div>
+              <div class="proj-stat">
+                <div class="proj-stat-value">10K</div>
+                <div class="proj-stat-label">Target Installs</div>
+              </div>
+              <div class="proj-stat">
+                <div class="proj-stat-value">3-5%</div>
+                <div class="proj-stat-label">Conversion Rate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COSTS & MARGINS -->
+          <div style="text-align:center;margin-bottom:72px;">
+            <div class="section-label">Unit Economics</div>
+            <h2 class="section-title">Low costs. High margins.</h2>
+            <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">AI-powered SaaS with near-zero infrastructure costs.</p>
+
+            <div class="costs-grid">
+              <div class="cost-card">
+                <div class="cost-icon">🤖</div>
+                <div class="cost-name">Claude API</div>
+                <div class="cost-amount">~$0.02</div>
+                <div class="cost-note">per report (vision + text)</div>
+              </div>
+              <div class="cost-card">
+                <div class="cost-icon">🏪</div>
+                <div class="cost-name">Chrome Web Store</div>
+                <div class="cost-amount">$5</div>
+                <div class="cost-note">one-time registration</div>
+              </div>
+              <div class="cost-card">
+                <div class="cost-icon">🌐</div>
+                <div class="cost-name">Hosting</div>
+                <div class="cost-amount">$0</div>
+                <div class="cost-note">GitHub Pages (landing)</div>
+              </div>
+              <div class="cost-card">
+                <div class="cost-icon">📡</div>
+                <div class="cost-name">Domain</div>
+                <div class="cost-amount">$12</div>
+                <div class="cost-note">per year (future)</div>
+              </div>
+              <div class="cost-card">
+                <div class="cost-icon">📣</div>
+                <div class="cost-name">Marketing</div>
+                <div class="cost-amount">$500</div>
+                <div class="cost-note">per month (LinkedIn + Google Ads)</div>
+              </div>
+            </div>
+
+            <div class="margin-box" style="margin-top:36px;">
+              <h3>Estimated Net Margin at Q4 (400 Pro + 30 Team)</h3>
+              <div class="margin-value">~89%</div>
+              <div class="margin-detail">Revenue: $9,370/mo — AI costs: -$400 — Infrastructure: -$100 — Marketing: -$500 = <strong>$8,370 net profit/month</strong></div>
+            </div>
+          </div>
+
+          <!-- ROI -->
+          <div style="text-align:center;">
+            <div class="section-label">Why this price?</div>
+            <h2 class="section-title">BugSnap pays for itself in 7 reports.</h2>
+            <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Manual bug reporting is expensive. BugSnap saves 15 minutes per report.</p>
+
+            <div class="roi-grid">
+              <div class="roi-card negative">
+                <div class="roi-label">Without BugSnap</div>
+                <div class="roi-amount">$1,190/mo</div>
+                <div class="roi-desc">3 QA engineers x 40 reports/mo<br>17 min each at $35/hr<br><strong>= 34 hours/month wasted</strong></div>
+              </div>
+              <div class="roi-card positive">
+                <div class="roi-label">With BugSnap</div>
+                <div class="roi-amount">$140/mo</div>
+                <div class="roi-desc">3 QA engineers x 40 reports/mo<br>2 min each at $35/hr<br><strong>= 4 hours/month total</strong></div>
+              </div>
+            </div>
+
+            <div class="roi-result">
+              <div class="roi-result-value">18x Return on Investment</div>
+              <div class="roi-result-label">For every <strong>$1 spent</strong> on BugSnap, teams save <strong>$18 in QA time</strong> — that's <strong>$993/month</strong> net savings and <strong>30 hours back</strong></div>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -1282,6 +1339,7 @@
       <div class="footer-links">
         <a href="#">GitHub</a>
         <a href="#">Privacy</a>
+        <a href="bmc.html">Business Model</a>
         <a href="https://tally.so/r/b5l8N1" target="_blank">Feedback</a>
       </div>
       <p>Built with ❤️ and Claude AI · Nexion 2026</p>
