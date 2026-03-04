@@ -816,6 +816,20 @@
     </div>
   </div>
 
+  <!-- DEMO VIDEO -->
+  <section class="demo-section" id="demo">
+    <div class="section-inner" style="text-align:center;">
+      <div class="section-label">See it in action</div>
+      <h2 class="section-title" style="max-width:600px;margin:0 auto 16px;">From bug to Work Item in under 60 seconds.</h2>
+      <p class="section-subtitle" style="max-width:500px;margin:0 auto 48px;">Watch BugSnap capture, analyze, and file a real bug — live.</p>
+
+      <div class="video-wrapper" id="videoWrapper">
+        <!-- Cuando tengas el video, reemplaza esto: -->
+        <video controls src="images/demo-video.mp4" poster="images/hero.png"></video>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="section">
     <div class="section-inner">
@@ -904,16 +918,35 @@
     </div>
   </section>
 
-  <!-- DEMO VIDEO -->
-  <section class="demo-section" id="demo">
-    <div class="section-inner" style="text-align:center;">
-      <div class="section-label">See it in action</div>
-      <h2 class="section-title" style="max-width:600px;margin:0 auto 16px;">From bug to Work Item in under 60 seconds.</h2>
-      <p class="section-subtitle" style="max-width:500px;margin:0 auto 48px;">Watch BugSnap capture, analyze, and file a real bug — live.</p>
+  <!-- TARGET USERS -->
+  <section class="section features-bg">
+    <div class="section-inner">
+      <div class="section-label">Target Users</div>
+      <h2 class="section-title">Who is BugSnap for?</h2>
+      <p class="section-subtitle">Three audiences with one shared pain: bad bug reports.</p>
 
-      <div class="video-wrapper" id="videoWrapper">
-        <!-- Cuando tengas el video, reemplaza esto: -->
-        <video controls src="images/demo-video.mp4" poster="images/hero.png"></video>
+      <div class="steps">
+        <div class="step">
+          <div class="step-body">
+            <div class="step-number" style="background:var(--green);">1</div>
+            <div class="step-title">QA Teams & Testers</div>
+            <p class="step-desc"><strong>Who:</strong> QA engineers in software companies (5-200 employees)<br><strong>Pain:</strong> Incomplete bug reports daily, waste hours investigating<br><strong>Buyer:</strong> QA Team Lead → approves with CTO/VP Engineering</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-body">
+            <div class="step-number" style="background:var(--green);">2</div>
+            <div class="step-title">Development Agencies</div>
+            <p class="step-desc"><strong>Who:</strong> Web/mobile agencies working with external clients<br><strong>Pain:</strong> Clients report bugs poorly, projects go over budget<br><strong>Buyer:</strong> Agency owner or Project Manager decides directly</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-body">
+            <div class="step-number" style="background:var(--green);">3</div>
+            <div class="step-title">Freelance Developers</div>
+            <p class="step-desc"><strong>Who:</strong> Freelance web developers reporting bugs to clients<br><strong>Pain:</strong> Clients describe bugs poorly, hard to reproduce without context<br><strong>Buyer:</strong> The freelancer decides directly</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1003,39 +1036,6 @@
       </table>
 
       <p class="compare-quote">"Bug reporting tools capture what happened. <span>BugSnap understands what happened.</span>"</p>
-    </div>
-  </section>
-
-  <!-- TARGET USERS -->
-  <section class="section features-bg">
-    <div class="section-inner">
-      <div class="section-label">Target Users</div>
-      <h2 class="section-title">Who is BugSnap for?</h2>
-      <p class="section-subtitle">Three audiences with one shared pain: bad bug reports.</p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-body">
-            <div class="step-number" style="background:var(--green);">1</div>
-            <div class="step-title">QA Teams & Testers</div>
-            <p class="step-desc"><strong>Who:</strong> QA engineers in software companies (5-200 employees)<br><strong>Pain:</strong> Incomplete bug reports daily, waste hours investigating<br><strong>Buyer:</strong> QA Team Lead → approves with CTO/VP Engineering</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-body">
-            <div class="step-number" style="background:var(--green);">2</div>
-            <div class="step-title">Development Agencies</div>
-            <p class="step-desc"><strong>Who:</strong> Web/mobile agencies working with external clients<br><strong>Pain:</strong> Clients report bugs poorly, projects go over budget<br><strong>Buyer:</strong> Agency owner or Project Manager decides directly</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-body">
-            <div class="step-number" style="background:var(--green);">3</div>
-            <div class="step-title">Freelance Developers</div>
-            <p class="step-desc"><strong>Who:</strong> Freelance web developers reporting bugs to clients<br><strong>Pain:</strong> Clients describe bugs poorly, hard to reproduce without context<br><strong>Buyer:</strong> The freelancer decides directly</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1155,50 +1155,6 @@
 
       <p class="roadmap-note">v1.0 live: Chrome + Azure / Jira / GitHub → <strong>Week 2: Recording + Payments</strong> → <strong>Month 3: Desktop + Mobile</strong> → <strong>Month 4: Full AI platform</strong></p>
     </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section">
-    <div class="section-inner" style="max-width:720px;">
-      <div class="section-label">FAQ</div>
-      <h2 class="section-title">Common questions</h2>
-
-      <div style="display:flex;flex-direction:column;gap:16px;margin-top:40px;">
-
-        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
-          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Is it really free?</div>
-          <p style="font-size:14px;color:var(--gray);line-height:1.7;">Yes. Unlimited screenshot captures, console logs and bug reports to Jira, Azure DevOps or GitHub — forever free. No credit card required. You get 3 AI auto-fill reports per month on the free plan.</p>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
-          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Is setup complicated?</div>
-          <p style="font-size:14px;color:var(--gray);line-height:1.7;">No. Install the extension, connect your Jira, Azure DevOps or GitHub account in settings, and you're ready. Takes under 2 minutes.</p>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
-          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">What happens when I run out of AI reports?</div>
-          <p style="font-size:14px;color:var(--gray);line-height:1.7;">You can still capture screenshots, console logs and send reports manually — the AI auto-fill is what gets paused. Upgrade to Pro for unlimited AI reports.</p>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
-          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Are my screenshots and logs stored anywhere?</div>
-          <p style="font-size:14px;color:var(--gray);line-height:1.7;">No. Screenshots and logs are sent directly to your bug tracker. We don't store them on our servers.</p>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
-          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Which sites does it work on?</div>
-          <p style="font-size:14px;color:var(--gray);line-height:1.7;">BugSnap works on any regular web app with an http/https URL. It does not work on Chrome's internal pages (new tab, settings, extensions) or local files.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <h2>Stop writing bug reports.<br>Start fixing bugs.</h2>
-    <p>Free plan available. AI-powered reports included. No credit card required.</p>
-    <a href="#" class="btn-primary" style="font-size:18px;padding:16px 36px;">🐛 Add to Chrome — Free</a>
   </section>
 
   <!-- INVESTOR INFO (collapsible) -->
@@ -1329,6 +1285,50 @@
 
         </div>
       </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Stop writing bug reports.<br>Start fixing bugs.</h2>
+    <p>Free plan available. AI-powered reports included. No credit card required.</p>
+    <a href="#" class="btn-primary" style="font-size:18px;padding:16px 36px;">🐛 Add to Chrome — Free</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-inner" style="max-width:720px;">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common questions</h2>
+
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:40px;">
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Is it really free?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">Yes. Unlimited screenshot captures, console logs and bug reports to Jira, Azure DevOps or GitHub — forever free. No credit card required. You get 3 AI auto-fill reports per month on the free plan.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Is setup complicated?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">No. Install the extension, connect your Jira, Azure DevOps or GitHub account in settings, and you're ready. Takes under 2 minutes.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">What happens when I run out of AI reports?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">You can still capture screenshots, console logs and send reports manually — the AI auto-fill is what gets paused. Upgrade to Pro for unlimited AI reports.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Are my screenshots and logs stored anywhere?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">No. Screenshots and logs are sent directly to your bug tracker. We don't store them on our servers.</p>
+        </div>
+
+        <div style="border:1px solid var(--border);border-radius:14px;padding:24px;">
+          <div style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Which sites does it work on?</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;">BugSnap works on any regular web app with an http/https URL. It does not work on Chrome's internal pages (new tab, settings, extensions) or local files.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
